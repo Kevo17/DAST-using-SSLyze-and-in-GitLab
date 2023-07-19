@@ -21,34 +21,61 @@ During this hands-on lab, participants will gain practical experience in integra
 
 <h2>Program walk-through:</h2>
 
+Let’s install SSlyze to perform Dynamic analysis: <br/>
+```
+pip3 install sslyze==5.0.3
+```
+<br/>
+ 
 <p align="center">
-Launch the utility: <br/>
-<img src="https://i.imgur.com/62TgaWL.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-Select the disk:  <br/>
-<img src="https://i.imgur.com/tcTyMUE.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-Enter the number of passes: <br/>
-<img src="https://i.imgur.com/nCIbXbg.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-Confirm your selection:  <br/>
-<img src="https://i.imgur.com/cdFHBiU.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-Wait for process to complete (may take some time):  <br/>
-<img src="https://i.imgur.com/JL945Ga.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-Sanitization complete:  <br/>
-<img src="https://i.imgur.com/K71yaM2.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-Observe the wiped disk:  <br/>
-<img src="https://i.imgur.com/AeZkvFQ.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/2MyMQxh.png" height="80%" width="80%" alt="Disk Sanitization Step"/>
 </p>
+
+<br />
+<br />
+
+We have successfully installed SSLyze scanner, let’s explore the functionality it provides us: <br/>
+```
+sslyze --help
+```
+<br/>
+ 
+<p align="center">
+<img src="https://i.imgur.com/qVDLBbn.png" height="80%" width="80%" alt="Disk Sanitization Step"/>
+</p>
+
+<br />
+<br />
+
+Let’s run sslyze with the following options: <br/>
+```
+sslyze --json_out sslyze-output.json prod-rcgsg0ei.lab.practical-devsecops.training:443
+```
+<br/>
+ 
+<p align="center">
+<img src="https://i.imgur.com/e2fh6Q2.png" height="80%" width="80%" alt="Disk Sanitization Step"/>
+</p>
+
+<br />
+<br />
+
+We can check the scan output using the following command: <br/>
+```
+cat sslyze-output.json
+```
+<br/>
+ 
+<p align="center">
+<img src="https://i.imgur.com/aElBSB4.png" height="80%" width="80%" alt="Disk Sanitization Step"/>
+</p>
+
+<br />
+<br />
+
+
+<img src="https://i.imgur.com/VwbLxft.png" height="80%" width="80%" alt="Disk Sanitization Step"/>
+<img src="https://i.imgur.com/yCPebnu.png" height="80%" width="80%" alt="Disk Sanitization Step"/>
 
 <!--
  ```diff
